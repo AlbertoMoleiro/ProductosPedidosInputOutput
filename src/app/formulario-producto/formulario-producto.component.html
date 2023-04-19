@@ -1,0 +1,26 @@
+<div class="formulario bg-white">
+  <h1>Productos</h1>
+  <mat-form-field class="full-width">
+    <mat-label>Nombre:</mat-label>
+    <input matInput [(ngModel)]="product.name">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Stock:</mat-label>
+    <input matInput [(ngModel)]="product.stock">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Precio:</mat-label>
+    <input matInput [(ngModel)]="product.price">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Tipos de Producto</mat-label>
+    <mat-select [(ngModel)]="productType">
+      <mat-option *ngFor="let product of productTypes" [value]="product">
+        {{product}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button class="full-width" mat-raised-button color="primary" (click)="addProduct()">Añadir</button>
+</div>
+
+<app-lista-productos [products]="products" *ngIf="products.length>0"></app-lista-productos>

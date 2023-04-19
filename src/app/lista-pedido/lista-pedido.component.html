@@ -1,0 +1,21 @@
+<app-formulario-pedido (ordersEvent)="addOrder($event)"></app-formulario-pedido>
+<table class="bg-white" *ngIf="orders.length>0">
+  <thead>
+    <tr>
+      <th>Id Pedido</th>
+      <th>Id Cliente</th>
+      <th>Nombre Cliente</th>
+      <th>Total Productos</th>
+      <th>Importe Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{order.idPedido}}</td>
+      <td>{{order.idCliente}}</td>
+      <td>{{order.nombreCliente}}</td>
+      <td>{{order.totalProductos}}</td>
+      <td>{{order.importeTotal}} €</td>
+    </tr>
+  </tbody>
+</table>
