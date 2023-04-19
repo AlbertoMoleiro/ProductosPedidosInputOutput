@@ -14,7 +14,7 @@
   </mat-form-field>
   <mat-form-field appearance="fill" class="full-width">
     <mat-label>Tipos de Producto</mat-label>
-    <mat-select [(ngModel)]="productType">
+    <mat-select [(ngModel)]="product.productType">
       <mat-option *ngFor="let product of productTypes" [value]="product">
         {{product}}
       </mat-option>

@@ -16,7 +16,7 @@ export class FormularioProductoComponent {
   constructor() { }
 
   addProduct(){
-    this.product.productType=TipoProducto[this.productType as keyof typeof TipoProducto]
+    /* this.product.productType=TipoProducto[this.productType as keyof typeof TipoProducto] */
     this.products.push(this.product);
     this.product = new Producto("",0,0,TipoProducto.ALIMENTACION);
   }
